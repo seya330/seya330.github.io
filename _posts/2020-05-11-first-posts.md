@@ -30,11 +30,10 @@ site.tags.TAG : TAG 태그가 붙은 모든 포스트 목록.
 site.url : _config.yml 에 설정한 사이트의 URL. 예를 들어, 환경설정 파일에 url: http://mysite.com 라는 내용이 있으면, Liquid 변수 site.url 로 이 값에 접근할 수 있다. 개발 환경에서는 한 가지 예외가 있는데, 개발 환경에서 jekyll serve 를 실행하면 site.url 은 host 와 port, SSL 관련 옵션으로 설정된다. 기본값은 url:http://localhost:4000 이다.  
 site.[CONFIGURATION_DATA] : 명령행이나 _config.yml 을 통해 설정된 모든 변수들은 site 변수를 통해 사용할 수 있다. 예를 들어, 환경설정 파일에 foo: bar 가 있다면, site.foo 와 같이 Liquid 로 접근할 수 있다. watch 모드가 켜진 경우에도 _config.yml 파일의 변경사항은 자동으로 적용되지 않기 때문에, 변경된 변수를 적용하려면 Jekyll 을 재시작해야 한다.  
 
-
+{% raw %}
 {{}}출력시 | 뒤의 것은 출력 방식을 뜻한다  
 ```
-{% raw %}
 ex) {{ post.date | date_to_string}}  
 {{ "/assets/css/style.css" | relative_url }} 로 입력시 관련된url로 변환되어 입력되어짐  
-{% endraw %}
 ```
+{% endraw %}
